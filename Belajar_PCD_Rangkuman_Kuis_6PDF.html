@@ -1,0 +1,106 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Belajar PCD - Rangkuman & Kuis</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#182033;--muted:#667085;--line:#e5e7eb;--a:#4f46e5;--al:#eef2ff;--g:#15803d;--r:#dc2626}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6}header{background:linear-gradient(135deg,#171a2d,#3730a3);color:#fff;padding:28px 16px;position:sticky;top:0;z-index:5}.wrap,main{max-width:1050px;margin:auto}.hero h1{margin:0;font-size:clamp(25px,6vw,40px)}.hero p{margin:3px 0;color:#dfe3ff}nav{display:flex;gap:8px;overflow:auto;margin-top:18px}.tab,.btn,.chip{border:0;border-radius:11px;padding:10px 14px;font-weight:750;cursor:pointer}.tab{background:#ffffff18;color:#fff;border:1px solid #ffffff38;white-space:nowrap}.tab.active{background:#fff;color:#29255f}main{padding:22px 14px}.page{display:none}.page.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 4px 18px #17255408}h2{margin:0 0 10px}h3{margin:17px 0 6px}.def{background:var(--al);border-left:5px solid var(--a);padding:13px 15px;border-radius:10px;margin:10px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.mini{border:1px solid var(--line);border-radius:12px;padding:13px}.memory{background:#ecfdf5;border-left:5px solid #16a34a;padding:13px;border-radius:10px}.warn{background:#fff7ed;border-left:5px solid #f59e0b;padding:13px;border-radius:10px}table{width:100%;border-collapse:collapse;font-size:14px;margin:9px 0}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#f1f3f9}.formula{display:block;background:#f1f3f9;padding:9px;border-radius:8px;font-weight:700;margin:8px 0}details{border:1px solid var(--line);border-radius:11px;margin-top:8px}summary{padding:11px;cursor:pointer;font-weight:750}details>div{padding:0 12px 12px}.small{color:var(--muted);font-size:14px}.btn{background:var(--a);color:#fff}.chip{background:#fff;border:1px solid var(--line)}.chip.active{background:var(--al);color:#3730a3}.controls{display:flex;gap:7px;flex-wrap:wrap}.qbox{border:1px solid var(--line);border-radius:13px;padding:15px;margin-top:12px}.opt{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px;margin:7px 0;cursor:pointer;font-size:15px}.opt.correct{background:#f0fdf4;border-color:#86efac}.opt.wrong{background:#fef2f2;border-color:#fecaca}.exp{display:none;background:#f8fafc;border-radius:10px;padding:12px;margin-top:10px}.exp.show{display:block}.score{font-size:28px;font-weight:900;color:var(--a)}@media(max-width:600px){.card{padding:15px}table{font-size:13px}.opt{padding:13px 11px}}
+</style></head><body>
+<header><div class="wrap hero"><h1>Belajar Pengolahan Citra Digital</h1><p>Rangkuman 6 PDF + latihan + kuis interaktif dengan pembahasan</p><nav><button class="tab active" data-p="materi">Rangkuman</button><button class="tab" data-p="latihan">Latihan</button><button class="tab" data-p="kuis">Kuis</button></nav></div></header><main>
+
+<section id="materi" class="page active">
+<div class="card"><h2>Definisi inti — wajib hafal</h2>
+<div class="def"><b>Apa itu citra?</b><br>Citra adalah sinyal dwimatra yang menyatakan intensitas cahaya pada bidang dua dimensi, secara matematis <b>f(x,y)</b>.</div>
+<div class="def"><b>Apa itu citra digital?</b><br>Representasi citra kontinu yang telah didiskritisasi sehingga dapat direpresentasikan dan diproses komputer, umumnya sebagai matriks pixel.</div>
+<div class="def"><b>Apa itu pengolahan citra digital?</b><br>Proses komputer untuk melakukan operasi pada citra agar kualitasnya diperbaiki, informasi tertentu ditonjolkan, atau fitur/objek dianalisis.</div>
+<div class="def"><b>Apa itu computer vision?</b><br>Proses yang mengintegrasikan akuisisi, pemrosesan, klasifikasi/pengenalan, interpretasi, dan penggunaan informasi visual untuk tujuan tertentu.</div>
+<div class="def"><b>Apa itu pixel?</b><br>Elemen penyusun citra digital yang memiliki posisi serta nilai intensitas atau warna.</div>
+<div class="def"><b>Apa itu histogram?</b><br>Grafik yang menunjukkan frekuensi kemunculan nilai intensitas pixel pada citra.</div></div>
+
+<div class="card"><h2>1. Pengantar PCD</h2><p><b>Intinya:</b> citra diproses → kualitas/informasi diperbaiki → citra dapat dianalisis atau dipahami.</p>
+<div class="grid"><div class="mini"><b>Image Enhancement</b><br>Memperbaiki tampilan/menonjolkan ciri: brightness, contrast, sharpening, noise filtering.</div><div class="mini"><b>Image Restoration</b><br>Menghilangkan atau meminimalkan degradasi ketika penyebab degradasi diketahui.</div><div class="mini"><b>Image Analysis</b><br>Mengukur dan mengekstraksi ciri untuk menghasilkan deskripsi.</div><div class="mini"><b>Image Compression</b><br>Membuat representasi citra lebih ringkas untuk penyimpanan/transmisi.</div><div class="mini"><b>Interpolation</b><br>Memperkirakan nilai pixel ketika ukuran/posisi citra diubah.</div><div class="mini"><b>Pattern Recognition</b><br>Mengenali keteraturan/pola untuk mengidentifikasi objek.</div></div>
+<h3>Image Processing vs Computer Vision</h3><table><tr><th>Level</th><th>Input → Output</th><th>Contoh</th></tr><tr><td>Low</td><td>Image → Image</td><td>noise removal, sharpening</td></tr><tr><td>Mid</td><td>Image → Attributes</td><td>segmentation, object detection/recognition</td></tr><tr><td>High</td><td>Attributes → Understanding</td><td>scene understanding, autonomous navigation</td></tr></table>
+<p><b>Hafalan:</b> image processing terutama memanipulasi citra; computer vision melangkah sampai atribut, pemahaman, dan keputusan.</p>
+<h3>Tahapan penting</h3><p>Acquisition → Enhancement/Restoration → Morphological Processing → Segmentation → Representation & Description → Recognition. Ada pula colour image processing dan compression.</p></div>
+
+<div class="card"><h2>2. Pembentukan & Digitalisasi Citra</h2><p>Citra digital direpresentasikan sebagai matriks <b>M × N</b>. M = baris, N = kolom. Setiap elemen adalah pixel.</p><span class="formula">f(x,y) = nilai intensitas pada posisi (x,y)</span><p>Citra 1200 × 1500 memiliki 1.800.000 pixel.</p>
+<h3>Sampling vs Quantization</h3><table><tr><th></th><th>Yang didiskritisasi</th><th>Makna sederhana</th></tr><tr><td><b>Sampling</b></td><td>Koordinat spasial x,y</td><td>Berapa banyak pixel dan bagaimana susunannya.</td></tr><tr><td><b>Quantization</b></td><td>Nilai intensitas</td><td>Berapa banyak level intensitas yang tersedia.</td></tr></table>
+<div class="memory"><b>Kunci:</b> sampling = posisi/pixel; quantization = nilai intensitas/graylevel.</div>
+<h3>Graylevel</h3><p>Jumlah level biasanya <b>K = 2<sup>m</sup></b>. 1 bit → 2 level; 2 bit → 4; 4 bit → 16; 8 bit → 256 (0–255).</p>
+<h3>Jenis citra</h3><table><tr><th>Jenis</th><th>Ciri</th></tr><tr><td>Binary</td><td>1 bit; nilai 0 dan 1.</td></tr><tr><td>Grayscale</td><td>Umumnya 8 bit; 0–255.</td></tr><tr><td>RGB</td><td>R,G,B; 8 bit per kanal = 24 bit/pixel.</td></tr></table>
+<h3>Resolusi & sensor</h3><p>Resolusi berkaitan dengan detail citra dan jumlah pixel. Sensor <b>CCD</b> dan <b>CMOS</b> digunakan untuk akuisisi citra dan memiliki mekanisme pembacaan sinyal yang berbeda.</p></div>
+
+<div class="card"><h2>3. Format Citra</h2><p>File citra biasanya mempunyai <b>header</b>; banyak format memiliki <i>signature/magic number</i> untuk identifikasi format.</p>
+<table><tr><th>Format</th><th>Yang perlu dihafal</th></tr><tr><td>PBM</td><td>Portable Bitmap, citra biner.</td></tr><tr><td>PGM</td><td>Portable Graymap, grayscale.</td></tr><tr><td>PPM</td><td>Portable Pixmap, warna.</td></tr><tr><td>BMP</td><td>Umumnya tidak terkompresi; kualitas terjaga, ukuran besar; punya header dan dapat memakai palet untuk ≤8 bit/pixel.</td></tr><tr><td>GIF</td><td>Palet + LZW; cocok warna terbatas; dapat animated.</td></tr><tr><td>JPEG</td><td>Lossy + DCT; file lebih kecil dengan penurunan kualitas visual.</td></tr><tr><td>PNG</td><td>Portable Network Graphics; format terbuka yang banyak dipakai di internet.</td></tr><tr><td>TIFF</td><td>Tagged Image File Format; format fleksibel untuk citra.</td></tr><tr><td>FITS</td><td>Flexible Image Transport System; umum pada data/citra astronomi dan ilmiah.</td></tr><tr><td>Raw</td><td>Tidak mempunyai format spesifik; berisi ukuran dan data bitmap, dapat berupa ASCII untuk grayscale.</td></tr></table>
+<h3>Indexed vs Truecolor</h3><p><b>Indexed:</b> matriks pixel berisi indeks ke colormap/palet RGB. <b>Truecolor:</b> nilai R,G,B langsung disimpan tanpa palet.</p><p>Pada RGB 24-bit: <b>2<sup>24</sup> = 16.777.216</b> kombinasi warna.</p>
+<div class="warn"><b>Catatan ujian:</b> kalau ditanya “format mana yang lossy dan memakai DCT?” → JPEG. “format palet + LZW?” → GIF. “umumnya tidak dikompresi?” → BMP.</div></div>
+
+<div class="card"><h2>4. Operasi Dasar Pengolahan Citra</h2><table><tr><th>Aras</th><th>Inti</th></tr><tr><td>Titik</td><td>Output pixel bergantung pada pixel itu sendiri.</td></tr><tr><td>Lokal</td><td>Output bergantung pada pixel dan tetangganya.</td></tr><tr><td>Global</td><td>Dipengaruhi informasi keseluruhan citra; contoh penyetaraan histogram.</td></tr><tr><td>Objek</td><td>Dilakukan pada objek tertentu untuk mengukur/mengenali karakteristiknya.</td></tr></table>
+<h3>Operasi wajib</h3><div class="grid"><div class="mini"><b>Thresholding</b><br>Membandingkan pixel dengan ambang T.<span class="formula">A&lt;T → 0; A≥T → 1</span></div><div class="mini"><b>Negatif</b><span class="formula">f' = 255 − f</span></div><div class="mini"><b>Brightening</b><span class="formula">f' = f + b</span>Clipping ke 0–255.</div><div class="mini"><b>RGB → Grayscale</b><span class="formula">Y = 0.299R + 0.587G + 0.144B</span></div></div>
+<h3>Operasi aritmetika</h3><span class="formula">C=A+B</span><span class="formula">C=A−B</span><span class="formula">C=A×B (pixel bersesuaian)</span><p>Penjumlahan beberapa citra yang sama dapat membantu mengurangi noise dengan perataan. Pengurangan citra dapat dipakai untuk mendeteksi perubahan/cacat.</p>
+<div class="memory"><b>Clipping:</b> pada citra 8-bit, hasil &lt;0 menjadi 0 dan hasil &gt;255 menjadi 255.</div></div>
+
+<div class="card"><h2>5. Histogram Citra</h2><div class="def"><b>Histogram = distribusi/frekuensi nilai intensitas.</b> Histogram memberi informasi tentang brightness dan contrast, tetapi tidak menunjukkan posisi pixel.</div>
+<h3>Normalisasi</h3><span class="formula">hᵢ = nᵢ / n</span><p>nᵢ = jumlah pixel dengan intensitas i; n = total pixel. hᵢ berada pada 0–1 dan dapat dipandang sebagai peluang pixel memiliki intensitas i.</p>
+<table><tr><th>Pola</th><th>Kecenderungan</th></tr><tr><td>Banyak di kiri</td><td>Gelap</td></tr><tr><td>Banyak di kanan</td><td>Terang</td></tr><tr><td>Rentang sempit</td><td>Kontras rendah</td></tr><tr><td>Rentang lebar</td><td>Kontras lebih tinggi</td></tr></table>
+<div class="memory"><b>Ingat:</b> histogram RGB dibuat untuk masing-masing kanal R, G, dan B.</div></div>
+
+<div class="card"><h2>Ringkasan 30 detik</h2><table><tr><th>Istilah</th><th>Jawaban</th></tr><tr><td>Citra</td><td>Fungsi 2D intensitas cahaya.</td></tr><tr><td>Citra digital</td><td>Citra kontinu yang telah didiskritisasi menjadi pixel.</td></tr><tr><td>Sampling</td><td>Diskritisasi posisi spasial.</td></tr><tr><td>Quantization</td><td>Diskritisasi intensitas.</td></tr><tr><td>8-bit grayscale</td><td>256 level, 0–255.</td></tr><tr><td>RGB 24-bit</td><td>3×8 bit.</td></tr><tr><td>Histogram</td><td>Frekuensi intensitas.</td></tr><tr><td>Threshold</td><td>Pemisahan berdasarkan ambang.</td></tr><tr><td>Negative</td><td>255−pixel.</td></tr><tr><td>JPEG</td><td>Lossy + DCT.</td></tr><tr><td>GIF</td><td>LZW + palet.</td></tr><tr><td>BMP</td><td>Umumnya tidak terkompresi.</td></tr></table></div>
+</section>
+
+<section id="latihan" class="page"><div class="card"><h2>Latihan Soal + Pembahasan</h2><p class="small">Coba jawab sendiri dulu, kemudian buka pembahasannya.</p></div><div id="practice"></div></section>
+
+<section id="kuis" class="page"><div class="card"><h2>Kuis PCD</h2><p>Pilih cakupan materi lalu mulai. Jawaban langsung diberi penjelasan.</p><div id="filters" class="controls"><button class="chip active" data-c="0">Semua</button><button class="chip" data-c="1">Pengantar</button><button class="chip" data-c="2">Digitalisasi</button><button class="chip" data-c="3">Format</button><button class="chip" data-c="4">Operasi</button><button class="chip" data-c="5">Histogram</button></div><br><button class="btn" id="start">Mulai Kuis</button></div><div id="quizbox" class="card" style="display:none"></div></section>
+</main>
+<script>
+const P=[
+["Apa perbedaan sampling dan quantization?","Sampling mendiskritisasi koordinat/ruang, sedangkan quantization mendiskritisasi nilai intensitas.","Sampling menjawab jumlah/susunan pixel; quantization menentukan level intensitas."],
+["Citra 8-bit grayscale memiliki berapa level?","256 level, yaitu 0–255.","K=2^8=256."],
+["Mengapa RGB 24-bit punya 16.777.216 warna?","Ada 3 kanal dan masing-masing 256 nilai.","2^24=16.777.216."],
+["Apa fungsi histogram?","Menunjukkan frekuensi kemunculan nilai intensitas.","Histogram tidak menunjukkan posisi pixel."],
+["Histogram banyak di kiri berarti?","Citra cenderung gelap.","Sisi kiri berisi intensitas rendah."],
+["Apa tujuan thresholding?","Memisahkan pixel berdasarkan nilai ambang, sering menjadi citra biner.","Pixel dibandingkan dengan T."],
+["Negatif pixel 80 pada grayscale 8-bit?","175","255−80=175."],
+["Rumus brightening?","f'=f+b","Jika b positif citra lebih terang; clipping diperlukan."],
+["Format lossy berbasis DCT?","JPEG","JPEG menggunakan DCT dan lossy compression."],
+["Format umumnya tidak terkompresi dan berukuran besar?","BMP","BMP umumnya tidak dikompresi."],
+["Indexed image berbeda dari truecolor karena?","Indexed memakai matriks indeks + palet; truecolor menyimpan RGB langsung.","Truecolor tidak membutuhkan palet."],
+["Mengapa pengurangan citra dapat mendeteksi perubahan?","Perbedaan nilai pixel menonjolkan bagian yang berubah.","Pixel yang berubah menghasilkan selisih."],
+["Enhancement vs restoration?","Enhancement menonjolkan/perbaiki tampilan; restoration meminimalkan degradasi dengan penyebab diketahui.","Perbedaan utamanya ada pada penanganan degradasi."],
+["Low/mid/high level?","Image→image; image→attributes; attributes→understanding.","Semakin tinggi level, semakin tinggi interpretasi."],
+["Citra 200×300 punya berapa pixel?","60.000","200×300=60.000."],
+["Jika m=4 bit, jumlah level?","16","2^4=16."],
+["Jika hᵢ=0,25 dan total pixel 1000, nᵢ?","250","nᵢ=hᵢ×n=0,25×1000."],
+["Kegunaan penjumlahan beberapa citra sama?","Mengurangi noise dengan merata-ratakan.","Rata-rata beberapa pengambilan dapat mengurangi noise."],
+["Apa itu pixel?","Elemen penyusun citra digital yang punya posisi dan nilai.","M×N terdiri dari M×N pixel."],
+["Inti computer vision dibanding image processing?","Computer vision mencakup interpretasi/pemahaman visual.","Image processing terutama mentransformasi data citra."]
+];
+P.forEach((x,i)=>document.querySelector("#practice").insertAdjacentHTML("beforeend",`<div class="card"><b>Latihan ${i+1}</b><h3>${x[0]}</h3><details><summary>Lihat jawaban & pembahasan</summary><div><b>Jawaban:</b> ${x[1]}<br><b>Penjelasan:</b> ${x[2]}</div></details></div>`));
+
+const Q=[
+[1,"Apa definisi paling tepat untuk citra digital?",["Sinyal audio yang diubah menjadi data","Representasi citra kontinu yang telah didiskritisasi","Kumpulan objek 3D tanpa pixel","Grafik vektor yang hanya berisi garis"],1,"Citra digital merupakan representasi citra kontinu yang sudah didiskritisasi dan direpresentasikan sebagai pixel."],
+[1,"Image → attributes termasuk proses?",["Low level","Mid level","High level","Compression"],1,"Mid-level menghasilkan atribut dari image, misalnya hasil segmentasi/deteksi."],
+[2,"Yang didiskritisasi pada sampling?",["Nilai intensitas","Koordinat spasial","Nama file","Palet warna"],1,"Sampling bekerja pada koordinat x dan y."],
+[2,"Yang didiskritisasi pada quantization?",["Posisi pixel","Ukuran file","Nilai intensitas","Jumlah kanal"],2,"Quantization mengubah intensitas kontinu menjadi level diskrit."],
+[2,"512×512 pixel sama dengan?",["262.144","524.288","1.024","256"],0,"512×512=262.144."],
+[2,"6 bit grayscale mempunyai?",["6","32","64","128"],2,"2^6=64 level."],
+[2,"RGB 24-bit berarti?",["24 kanal×1 bit","3 kanal×8 bit","2 kanal×12 bit","1 kanal×24 bit"],1,"R,G,B masing-masing 8 bit."],
+[3,"Keluarga Portable Bitmap/Graymap/Pixelmap adalah?",["PBM/PGM/PPM","BMP/GIF/JPEG","PNG/TIFF/FITS","RAW/JPEG/BMP"],0,"PBM=biner, PGM=grayscale, PPM=warna."],
+[3,"Format lossy berbasis DCT?",["BMP","GIF","JPEG","PBM"],2,"JPEG menggunakan DCT dan lossy compression."],
+[3,"Pada indexed image, matriks pixel berisi?",["Koordinat kamera","Indeks menuju palet","Panjang gelombang","Jumlah frame"],1,"Indeks menunjuk ke baris colormap RGB."],
+[3,"Jumlah warna truecolor 24-bit?",["256","65.536","16.777.216","24"],2,"2^24=16.777.216."],
+[3,"Format palet + LZW dan dapat animated?",["GIF","JPEG","Raw","PGM"],0,"GIF menggunakan palet dan LZW."],
+[4,"Aras titik terutama bergantung pada?",["Pixel itu sendiri","Semua objek 3D","Nama file","Metadata"],0,"Operasi titik dilakukan pada pixel tunggal dan diulang untuk seluruh citra."],
+[4,"Negatif pixel 200?",["55","200","255","455"],0,"255−200=55."],
+[4,"220 diberi brightening b=50, hasil clipping?",["170","220","255","270"],2,"220+50=270, dibatasi maksimum 255."],
+[4,"Rumus grayscale berbobot yang dicantumkan?",["Y=R+G+B","Y=(R+G+B)/3","Y=0.299R+0.587G+0.144B","Y=R−G−B"],2,"Rumus tersebut memperhitungkan kontribusi berbeda dari R,G,B."],
+[4,"Pengurangan citra berguna untuk?",["Mendeteksi perubahan","Menambah kanal","Mengubah citra menjadi audio","Menentukan nama file"],0,"Selisih pixel dapat menonjolkan perubahan."],
+[5,"Histogram menunjukkan?",["Lokasi pixel","Frekuensi nilai intensitas","Urutan penyimpanan","Ukuran sensor"],1,"Histogram adalah distribusi intensitas."],
+[5,"Rumus histogram ternormalisasi?",["n/nᵢ","nᵢ/n","nᵢ×n","n−nᵢ"],1,"Jumlah pixel pada intensitas i dibagi total pixel."],
+[5,"Citra dominan gelap, histogram cenderung?",["Kiri","Kanan","Tengah saja","Tidak dapat diketahui"],0,"Intensitas rendah berada di kiri."],
+[5,"Histogram RGB dibuat?",["Satu gabungan saja","Terpisah untuk R,G,B","Hanya B","Hanya kanal tertinggi"],1,"Setiap kanal warna dianalisis secara terpisah."]
+];
+let cat=0,quiz=[],idx=0,score=0;
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.getElementById(b.dataset.p).classList.add("active");scrollTo(0,0)});
+document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{document.querySelectorAll(".chip").forEach(x=>x.classList.remove("active"));b.classList.add("active");cat=+b.dataset.c});
+function start(){quiz=Q.filter(q=>cat===0||q[0]===cat).sort(()=>Math.random()-.5);idx=0;score=0;document.getElementById("quizbox").style.display="block";render();document.getElementById("quizbox").scrollIntoView({behavior:"smooth"})}
+function render(){if(idx>=quiz.length){document.getElementById("quizbox").innerHTML=`<h2>Kuis selesai</h2><div class="score">${score}/${quiz.length} benar</div><p>${Math.round(score/quiz.length*100)}%</p><button class="btn" onclick="start()">Ulangi</button>`;return}let q=quiz[idx],o=q[2].map((x,i)=>({x,i})).sort(()=>Math.random()-.5);document.getElementById("quizbox").innerHTML=`<div class="small">Soal ${idx+1} dari ${quiz.length}</div><h3>${q[1]}</h3><div id="opts"></div><div id="exp" class="exp"></div>`;o.forEach(a=>{let b=document.createElement("button");b.className="opt";b.textContent=String.fromCharCode(65+a.i)+". "+a.x;b.onclick=()=>answer(b,a.i,q);document.getElementById("opts").appendChild(b)})}
+function answer(btn,c,q){document.querySelectorAll("#opts .opt").forEach(b=>b.disabled=true);let ok=c===q[3];if(ok)score++;document.querySelectorAll("#opts .opt").forEach((b,i)=>{if(b.textContent.startsWith(String.fromCharCode(65+q[3])+"."))b.classList.add("correct")});if(!ok)btn.classList.add("wrong");let e=document.getElementById("exp");e.innerHTML=`<b>${ok?"Benar":"Belum tepat"}.</b> ${q[4]}<br><br><button class="btn" onclick="idx++;render()">Lanjut →</button>`;e.classList.add("show")}
+document.getElementById("start").onclick=start;
+</script></body></html>
